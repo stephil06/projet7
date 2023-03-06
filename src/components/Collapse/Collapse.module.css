@@ -1,0 +1,49 @@
+.c_collapse__button {
+  width: 100%;
+  height: 47px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  color: var(--couleur_texte_secondaire);
+  background-color: var(--couleur_texte_primaire);
+
+  display: flex;
+  justify-content: space-between;
+  /* placer ses enfants (i.e <button & <p>) aux extrémités  */
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+/* inverser la lettre V */
+.c_collapse__signe_open {
+  transform: rotate(-180deg);
+}
+
+.c_collapse__contenu {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: var(--couleur_texte_primaire);
+  background-color: var(--couleur_fond_tertiaire);
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.c_collapse__li {
+   list-style: none;   
+}
+
+/* ----- MEDIA QUERIES ------------------------------------------ */
+@media screen and (max-width: 767px) {
+  .c_collapse__button {
+    font-size: 13px;
+    height: 30px;
+  }
+
+  .c_collapse__contenu {
+    font-size: 12px;
+  }
+
+}
