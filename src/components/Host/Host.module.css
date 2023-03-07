@@ -1,0 +1,38 @@
+.c_host {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.c_host__name {
+    height: 64px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    margin-right: 10px;
+}
+
+.c_host__name p { 
+    margin: 0;
+    text-align: end;
+}
+
+.c_host__picture {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+
+/* ------- MEDIA QUERIES --------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    .c_host__name {
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .c_host__picture {
+        height: 32px;
+        width: 32px;
+    }
+}
