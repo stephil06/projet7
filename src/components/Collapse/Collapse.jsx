@@ -10,7 +10,7 @@ import classes from './Collapse.module.css';
                             - le contenu est visible 
                                     - Si contenu est un array : chaque élément est mis dans un <ul>
                                     - Sinon contenu est mis dans <p> 
-   - Si clic sut le bouton : la valeur de la constante open est inversée          
+   - Si clic sur le bouton : la valeur de la constante open est inversée          
 */
 function Collapse(props) {
     const [open, setOPen] = useState(false);

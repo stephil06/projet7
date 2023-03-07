@@ -1,0 +1,100 @@
+.c_logement__article{
+    color: var(--couleur_texte_primaire); 
+    margin: 0 50px;
+}
+
+.c_logement__img {
+    width: 100%;
+    object-fit: cover;
+    height: 249px;
+    top: 42px;
+    border-radius: 10px;
+}
+
+.c_logement__sans_image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.c_logement__title {   
+    font-size: 36px; /* background-color: green; */
+    margin-bottom:0px;
+}
+
+.c_logement__location {
+    font-size: 18px;
+}
+
+.c_logement__tags {
+    font-size: 14px; /* width : 115px; */
+    display: flex;
+    flex-wrap: no-wrap;
+}
+
+.c_logement__host_et_rating {
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* background-color: green; */
+    gap:20px;
+}
+
+.c_logement__collapses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    padding-bottom: 30px;
+}
+
+/* ------- MEDIA QUERIES --------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+
+    .c_logement__article{
+       margin: 0 20px; 
+       /*  color: green; */ 
+    }
+
+    .c_logement__sans_image {
+        display: flex; flex-direction: column;
+       /*  background-color: blue; */
+        /* margin-top: 20px; */
+    }
+
+    .c_logement__title_et_location_et_tags {
+       /* background-color: green; */
+        display: flex; flex-direction: column;
+        width: 100%;
+    }
+
+    .c_logement__host_et_rating {
+         /* background-color: pink; */
+        display: flex; 
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 100%;
+        margin-top: 5px;
+        /* margin-bottom: 20px; */
+    }
+
+    .c_logement__collapses {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+
+    .c_logement__title {
+        font-size: 18px;
+    }
+
+    .c_logement__location {
+        font-size: 14px;
+    }
+
+    .c_logement__tags {
+        font-size: 10px;
+    }
+
+}

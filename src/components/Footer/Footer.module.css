@@ -3,11 +3,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: var(--couleur_fond_secondaire);
 
     height: 209px;
 }
 
+.c_footer img {
+    height: 39.44px;
+    width: 122px;
+}
+
 .c_footer p {
-    color: white;
+    color: var(--couleur_texte_secondaire);
+    font-size: 24px;
+    /* background-color: green; */
+    margin-bottom: -40px;
+}
+
+/* ----- MEDIA QUERIES ------------------------------------------ */
+@media screen and (max-width: 767px) {
+    .c_footer p {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
 }
