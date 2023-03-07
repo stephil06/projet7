@@ -1,0 +1,30 @@
+.c_card__location {
+    position: relative;
+    border-radius: 10px;
+    height: 340px;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.c_card__titre {
+    position: absolute;
+    bottom: 15px; /* 25px; */ 
+    font-size: 18px;
+    font-weight: 500;
+    left: 19.71px;
+    color: var(--couleur_texte_secondaire);
+}
+
+.c_card__img {
+    object-fit: cover;
+}
+
+/* ------- MEDIA QUERIES --------------------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    .c_card__location {
+        height: 255px;
+        /* width: 340px; */
+    }
+}
