@@ -1,0 +1,26 @@
+.c_banner_about {
+    width: 85%;
+    margin: auto;
+}
+
+.c_section_about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+}
+
+/* ----- MEDIA QUERIES ------------------------------------------ */
+@media screen and (max-width: 767px) {
+    .c_banner_about {
+        width: 100%;
+        margin: auto;
+    }
+
+    .c_section_about {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
