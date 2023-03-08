@@ -1,6 +1,50 @@
 .c_nav {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	align-items: center;
 
+	padding-top: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.c_nav__logo {
+	width: 210.32px;
+	height: 68px;
+}
+
+.c_nav__link {
+	text-transform: lowercase;
+	/* mettre en minuscules */
+	text-transform: initial;
+	font-size: 24px;
+
+	color: var(--couleur_texte_primaire);
+	text-decoration: none;
+	/* retirer le souligné */
+}
+
+.c_links {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+/* ----- MEDIA QUERIES ------------------------------------------ */
+@media screen and (max-width: 767px) {
+	.c_nav {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.c_nav__link {
+		text-transform: uppercase;
+		/* mettre en majuscules */
+		font-size: 12px;
+	}
+
+	.c_nav__logo {
+		width: 145px;
+		height: 47px;
+	}
 }
