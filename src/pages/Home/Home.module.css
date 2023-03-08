@@ -1,0 +1,35 @@
+.c_main {
+  margin: 60px;
+}
+
+.c_section_location {
+  display: grid;
+  /* crée 3 colonnes égales qui se redimensionnent en fonction de l'espace disponible */
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 30px;
+  background: var(--couleur_fond_tertiaire);
+  border-radius: 25px;
+  padding: 50px;
+
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+/* ------- MEDIA QUERIES --------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .c_main {
+    max-width: 1080px;
+    margin: auto;
+  }
+
+  .c_section_location {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    background: var(--couleur_fond_primaire);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
+  }
+}
