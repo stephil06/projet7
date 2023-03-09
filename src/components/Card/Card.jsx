@@ -15,7 +15,7 @@ function Card(props) {
   return (
       <Link className={classes.c_card__location} to={'/location/' + props.id}>
         <img className={classes.c_card__img} src={props.cover} alt="location" />
-        <h2 className={classes.c_card_titre}>{props.title}</h2>
+        <h2 className={classes.c_card__titre}>{props.title}</h2>
       </Link>
   )
 
