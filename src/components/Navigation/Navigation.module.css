@@ -13,7 +13,13 @@
 	height: 68px;
 }
 
-.c_nav__link {
+.c_links {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.c_nav__link_inactif {
 	text-transform: lowercase;
 	/* mettre en minuscules */
 	text-transform: initial;
@@ -24,10 +30,11 @@
 	/* retirer le souligné */
 }
 
-.c_links {
-	display: flex;
-	justify-content: space-between;
-	gap: 40px;
+.c_nav__link_actif {
+	text-decoration: underline;
+
+	font-size: 24px;
+	color: var(--couleur_texte_primaire);
 }
 
 /* ----- MEDIA QUERIES ------------------------------------------ */
@@ -37,14 +44,15 @@
 		margin-right: 15px;
 	}
 
-	.c_nav__link {
-		text-transform: uppercase;
-		/* mettre en majuscules */
-		font-size: 12px;
-	}
-
 	.c_nav__logo {
 		width: 145px;
 		height: 47px;
 	}
+
+	.c_nav__link_inactif, .c_nav__link_actif {
+		text-transform: uppercase;
+		/* mettre en majuscules */
+		font-size: 12px;
+	}
+	
 }
