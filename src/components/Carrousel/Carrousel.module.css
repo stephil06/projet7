@@ -50,10 +50,6 @@
     color: var(--couleur_texte_secondaire);
 }
 
-.c_carrousel__compteur_mobile {
-    display: none;
-}
-
 /* ----- MEDIA QUERIES ------------------------------------------ */
 @media screen and (max-width: 767px) {
 
