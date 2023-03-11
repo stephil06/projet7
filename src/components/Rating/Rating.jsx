@@ -10,11 +10,11 @@ contenant les props : - 'nbPositif' : nombre de picto d'évaluations positives
                       - 'nbTotal' : nombre total de picto 
 affichant les nbPositif (sur nbTotal) picto d'évaluations positives, suivi des pictos d'évaluation négatives
 */
-function Rating(props) {
+function Rating({nbPositif, nbTotal}) {
 
-    // créer un array contenant 0, 1, 2...props.nbTotal-1
-    var pictos = new Array(props.nbTotal);
-    for (var i = 0; i < props.nbTotal; i++) {
+    // créer un array contenant 0, 1, 2...nbTotal-1
+    var pictos = new Array(nbTotal);
+    for (var i = 0; i < nbTotal; i++) {
         pictos[i] = i;
     }
 
@@ -22,7 +22,7 @@ function Rating(props) {
         <div className={classes.c_rating}>
 
             {pictos.map((picto) =>
-                props.nbPositif >= picto + 1 ? (
+                nbPositif >= picto + 1 ? (
                     <img
                         key={picto.toString()}
                         className={classes.c_rating__img}

@@ -6,17 +6,20 @@ import classes from './Card.module.css';
 /* Composant 'Card'
    - contenant les props : - 'id' : id du logement
                            - 'cover' : l'URL de l'image du logement
-                           - title : le titre du logement
+                           - 'title' : le titre du logement
    -  Affiche la Card du logement ayant pour id: id du logement    
    - Si clic sur la Card : redirection vers la page '/location/id          
 */
-function Card(props) {
+/* function Card(props) { */
+function Card({id, cover, title}) {
+  // Destructuring
+  // const {id, cover, title} = props;
 
   return (
-      <Link key={props.id} className={classes.c_card__location} to={'/location/' + props.id}>
-        <img className={classes.c_card__img} src={props.cover} alt="location" />
-        <h2 className={classes.c_card__titre}>{props.title}</h2>
-      </Link>
+    <Link key={id} className={classes.c_card__location} to={'/location/' + id}>
+      <img className={classes.c_card__img} src={cover} alt="location" />
+      <h2 className={classes.c_card__titre}>{title}</h2>
+    </Link>
   )
 
 }

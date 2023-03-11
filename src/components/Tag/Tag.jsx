@@ -9,10 +9,10 @@ affichant le 'texte' dans un rectangle (via 'c_tag') : - background au couleur d
                                                        - aux angles arrondis (via 'c_tag')
 */
 
-function Tag(props) {
+function Tag({texte}) {
     return (
         <div className={classes.c_tag}>
-            <p className={classes.c_tag__texte}>{props.texte}</p>
+            <p className={classes.c_tag__texte}>{texte}</p>
         </div>
     );
 }

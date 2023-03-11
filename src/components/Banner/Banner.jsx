@@ -5,12 +5,12 @@ import classes from './Banner.module.css'
                            - 'texte' : le texte mentionné dans l'image
 						   		- (Si texte = '' Alors : pas de texte affiché)    
 */
-function Banner(props) {
+function Banner({image, texte}) {
 
 	return (
 		<div className={classes.c_banner}>
-			<img src={props.image} alt="Banner du site Kasa" />
-			<p> {props.texte} </p>
+			<img src={image} alt="Banner du site Kasa" />
+			<p> {texte} </p>
 		</div>
 	)
 }
