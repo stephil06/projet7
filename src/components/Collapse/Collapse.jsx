@@ -35,7 +35,7 @@ function Collapse(props) {
                 (
                     <ul className={classes.c_collapse__contenu}>
                         {props.contenu.map((elt, index) => (
-                            <li className={classes.c_collapse__li} key={index}>{elt}</li>
+                            <li key={index} className={classes.c_collapse__li}>{elt}</li>
                         ))}
                     </ul>
                 ) :

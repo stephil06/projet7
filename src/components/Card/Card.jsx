@@ -13,7 +13,7 @@ import classes from './Card.module.css';
 function Card(props) {
 
   return (
-      <Link className={classes.c_card__location} to={'/location/' + props.id}>
+      <Link key={props.id} className={classes.c_card__location} to={'/location/' + props.id}>
         <img className={classes.c_card__img} src={props.cover} alt="location" />
         <h2 className={classes.c_card__titre}>{props.title}</h2>
       </Link>

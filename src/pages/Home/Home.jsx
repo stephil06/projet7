@@ -16,19 +16,19 @@ function Home() {
   // console.log(locations);
 
   return (
-    <main className={classes.c_main}>
+    <div className={classes.c_main}>
       <Banner image={image_banner} texte={"Chez vous, partout et ailleurs"} />
 
       <section className={classes.c_section_location}>
         { /* Pour chaque location : ajouter le composant <Card> */}
         {locations.map((location) => {
           return (
-            <Card title={location.title} cover={location.cover} id={location.id}></Card>
+            <Card key={location.id} title={location.title} cover={location.cover} id={location.id}></Card>
           );
         }
         )}
       </section>
-    </main>
+    </div>
   );
 }
 

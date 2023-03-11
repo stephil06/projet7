@@ -38,9 +38,9 @@ function About() {
       <section className={classes.c_section_about}>
 
       { /* Pour chaque qualité : ajouter un <Collapse> /> */}
-        {qualites.map((qualite) => {
+        {qualites.map((qualite, index) => {
           return (
-            <Collapse label={qualite.nom} contenu={qualite.description} />
+            <Collapse key={index} label={qualite.nom} contenu={qualite.description} />
           );
         }
         )}
