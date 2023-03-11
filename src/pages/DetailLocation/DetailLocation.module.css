@@ -1,14 +1,8 @@
 .c_logement__article{
     color: var(--couleur_texte_primaire); 
     margin: 0 50px;
-}
-
-.c_logement__img {
-    width: 100%;
-    object-fit: cover;
-    height: 249px;
-    top: 42px;
-    border-radius: 10px;
+    padding-top : 30px;
+    /* background-color: green; */
 }
 
 .c_logement__sans_image {

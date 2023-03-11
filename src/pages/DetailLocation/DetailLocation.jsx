@@ -4,6 +4,7 @@ import logts from '../../data/logements.json';
 
 import classes from './DetailLocation.module.css';
 
+import Carrousel from '../../components/Carrousel/Carrousel';
 import Tag from '../../components/Tag/Tag';
 import Host from '../../components/Host/Host';
 import Rating from '../../components/Rating/Rating';
@@ -24,8 +25,8 @@ function DetailLocation() {
   return (
     
     <article className={classes.c_logement__article}>
-      <img className={classes.c_logement__img} src={logt.cover} alt="location" />
-      
+      <Carrousel pictures={logt.pictures} />
+    
       <div className={classes.c_logement__sans_image}>
 
         <div className={classes.c_logement__title_et_location_et_tags}>
