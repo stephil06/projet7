@@ -43,6 +43,10 @@
     padding-bottom: 30px;
 }
 
+ .c_equipements {
+    list-style: none;
+ }
+
 /* ------- MEDIA QUERIES --------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
 

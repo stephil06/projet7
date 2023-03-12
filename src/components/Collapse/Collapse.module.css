@@ -31,10 +31,6 @@
   padding-left: 20px;
 }
 
-.c_collapse__li {
-   list-style: none;   
-}
-
 /* ----- MEDIA QUERIES ------------------------------------------ */
 @media screen and (max-width: 767px) {
   .c_collapse__button {
