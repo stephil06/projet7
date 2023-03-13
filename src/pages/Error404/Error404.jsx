@@ -1,17 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-// import './Error404.css'
-import classes from './Error404.module.css'
+import Navigation from '../../components/Navigation/Navigation';
+
+import classes from './Error404.module.css';
 
 function Error404() {
   return (
-    <div className={classes.c_div__erreur}>
-      <h1> 404 </h1>
-      <p>Oups! La page que vous demandez n'existe pas.</p>
-      <p>Retourner sur la page d'accueil</p>
+    <div>
+      <Navigation />
+      <div className={classes.c_error}>
+        <div className={classes.c_error__numero_et_message}>
+          <p className={classes.c_error_numero}>404</p>
+          <p className={classes.c_error_message}>  Oups! La page que vous demandez n'existe pas.  </p>
+        </div>
+        <Link className={classes.c_error__link} to="/"> Retourner sur la page d'accueil </Link>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Error404
+export default Error404;

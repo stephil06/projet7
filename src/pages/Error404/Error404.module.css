@@ -1,20 +1,57 @@
-.c_div__erreur {
+.c_error {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--couleur_texte_primaire);
 }
 
-.c_div__erreur h1 {
-    color: red;
-    font-weight: 700;
-    font-size: 96px;
-
+.c_error__numero_et_message {
+    text-align: center;
 }
 
-.c_div__erreur p {
-    margin-top: 50px;
-    font-size: 18px;
-    color: red;
+.c_error_numero {
+    font-size: 288px;
+    margin-top: 277px;
+}
+
+.c_error_message {
+    font-size: 36px;
     font-weight: 500;
-  }
+    margin-top: -300px;
+    /* 66px; */
+}
+
+.c_error__link {
+    font-size: 18px;
+    color: var(--couleur_texte_primaire);
+    font-weight: 500;
+    margin-top: 182px;
+    margin-bottom: 159px;
+}
+
+/* ------- MEDIA QUERIES --------------------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+
+    .c_error_numero {
+        font-size: 96px;
+        margin-top: 262px;
+    }
+
+    .c_error_message {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 40px;
+        font-size: 18px;
+        /* margin-top: 11px; */
+        margin-top: -100px;
+    }
+
+    .c_error__link {
+        font-size: 14px;
+        margin-top: 133px;
+        margin-bottom: 235px;
+    }
+}

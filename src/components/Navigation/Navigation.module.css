@@ -49,10 +49,11 @@
 		height: 47px;
 	}
 
-	.c_nav__link_inactif, .c_nav__link_actif {
+	.c_nav__link_inactif,
+	.c_nav__link_actif {
 		text-transform: uppercase;
 		/* mettre en majuscules */
 		font-size: 12px;
 	}
-	
+
 }
