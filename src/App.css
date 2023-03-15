@@ -1,0 +1,31 @@
+/* Déclarration des VARIABLES */
+
+/* Couleurs (de la charte) ------------------------------------------------------------------ */
+:root {
+  --couleur_texte_primaire: #ff6060;
+  /* initialement orange */
+  --couleur_texte_secondaire: #FFFFFF;
+    /* blanc */
+  --couleur_texte_tertiaire:#000000;
+
+  --couleur_fond_primaire:#FFFFFF;
+  /* initialement gris foncé */
+  --couleur_fond_secondaire: #000000;
+  /* initialement black; */
+  --couleur_fond_tertiaire: #F6F6F6;
+  --couleur_fond_quaternaire: #FF6060;
+
+}
+
+/* Importer 2 polices (dans le fichier CSS => importation unique)
+  - Picto : font-awesome
+  - Texte: Montserra
+*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+* {
+  font-family: 'Montserrat', sans-serif; /* Cursive; */ /* 'Montserrat', sans-serif; */
+}
