@@ -12,8 +12,8 @@ import Card from '../../components/Card/Card';
 */
 function Home() {
 
-  // mettre un titre dynamique dans l'onglet du navigateur
-  // document.title = `HomePage`;
+  // mettre un titre dans l'onglet du navigateur
+  document.title = "Page d'accueil Kasa";
 
   // récupérer le tableau des logements
   const logements = useLoaderData();

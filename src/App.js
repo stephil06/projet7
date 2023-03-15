@@ -1,6 +1,6 @@
 import React from 'react'; // pour programmer des sites web d'une seule page (Single Page Application)
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
-    from 'react-router-dom'; // precondition : npm install --save react-router-dom
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider }
+  from 'react-router-dom'; // precondition : npm install --save react-router-dom
 
 import './App.css';
 
@@ -45,19 +45,18 @@ const router = createBrowserRouter(
     // Cela signifie que lorsque l'utilisateur visite une URL sur le navigateur, 
     // un Component correspondant doit être rendu sur l'interface.
 
-    <Route path="/" 
-    suppressNoMatchWarning={true}
-       element={<BaseLayout />} errorElement={<Error404 />} 
-       render={document.title = "Erreur 404"}  >
-      <Route 
-        index element={<Home />} loader={LoaderListeLogements} 
-        render={document.title = "Home"} />
+    <Route path="/"
+      element={<BaseLayout />} errorElement={<Error404 />}
+    >
+      <Route
+        index element={<Home />} loader={LoaderListeLogements}
+      />
       <Route path="location/:id"
-      element={<DetailLocation />} loader={LoaderDetailLogement} 
-      render={ document.title = "Détail location" } />
-      <Route path="apropos" 
-      element={<About />} 
-      render= {document.title = "A propos"} />
+        element={<DetailLocation />} loader={LoaderDetailLogement}
+      />
+      <Route path="apropos"
+        element={<About />}
+      />
     </Route>
 
   )

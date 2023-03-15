@@ -29,6 +29,9 @@ const qualites = [
 
 function About() {
 
+  // mettre un titre dans l'onglet du navigateur
+  document.title = "A propos";
+
   return (
     <div>
       <div className={classes.c_banner_about}>
@@ -37,7 +40,7 @@ function About() {
 
       <section className={classes.c_section_about}>
 
-      { /* Pour chaque qualité : ajouter un <Collapse> /> */}
+        { /* Pour chaque qualité : ajouter un <Collapse> /> */}
         {qualites.map((qualite, index) => {
           return (
             <Collapse key={index} label={qualite.nom} contenu={qualite.description} />

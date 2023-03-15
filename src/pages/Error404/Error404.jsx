@@ -6,6 +6,9 @@ import Navigation from '../../components/Navigation/Navigation';
 import classes from './Error404.module.css';
 
 function Error404() {
+  // mettre un titre dans l'onglet du navigateur
+  document.title = "Page d'erreur";
+
   return (
     <div>
       <Navigation />

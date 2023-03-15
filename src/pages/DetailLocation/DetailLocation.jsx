@@ -15,12 +15,12 @@ import Error404 from '../../pages/Error404/Error404';
 */
 function DetailLocation() {
  
-  // mettre un titre dynamique dans l'onglet du navigateur
-  // document.title = "Détail location";
-
-  // récupérer le logement ayant pour id logtId
+   // récupérer le logement ayant pour id logtId
   const logt = useLoaderData();
   // console.log("logt:" + logt);
+
+   // mettre un titre dans l'onglet du navigateur
+   document.title = logt.title;
 
   let equipements = undefined;
   if (logt !== undefined) {
