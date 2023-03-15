@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom'; // pour utiliser la fonction : data = useLoaderData();
 
 import classes from './Home.module.css';
 
@@ -11,9 +12,11 @@ import Card from '../../components/Card/Card';
 */
 function Home() {
 
-  // récupérer le tableau des locations
-  const locations = require('../../data/logements.json');
-  // console.log(locations);
+  // mettre un titre dynamique dans l'onglet du navigateur
+  // document.title = `HomePage`;
+
+  // récupérer le tableau des logements
+  const logements = useLoaderData();
 
   return (
     <div className={classes.c_main}>
@@ -21,9 +24,9 @@ function Home() {
 
       <section className={classes.c_section_location}>
         { /* Pour chaque location : ajouter le composant <Card> */}
-        {locations.map((location) => {
+        {logements.map((location) => {
           return (
-            <Card key={location.id} title={location.title} cover={location.cover} id={location.id}></Card>
+            <Card key={location.id} id={location.id} cover={location.cover} title={location.title}></Card>
           );
         }
         )}
@@ -32,4 +35,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;
