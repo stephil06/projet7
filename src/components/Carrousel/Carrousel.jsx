@@ -5,31 +5,50 @@ import classes from './Carrousel.module.css';
 
 import flecheGauche from '../../images/pc_fleche_gauche.svg';
 import flecheDroite from '../../images/pc_fleche_droite.svg';
+import pictoInactif from '../../images/pictoInactif.png'; // cf. https://www.flaticon.com/fr/chercher/5?word=cercle&shape=outline
+import pictoActif from '../../images/pictoActif.png';
 
 /* Composant 'Carrousel' 
-- contenant les props : - 'pictures' : array d'image(s) correspondant à "pictures" (pour un idlogement) du fichier data/logements.json
+- contenant les props : 'pictures' : array d'image(s) correspondant à 'pictures' (pour un idlogement) du fichier data/logements.json
 - affichant le(s) image(s) de 'pictures'
 
-- Si nbImages (nombre d'images de 'pictures') >=2 : 
-        ajouter     les flèches gauche & droite 
-                    & le compteur
-                        (n° image courante / nbImages  pour la version Desktop)
-                        (n° image courante dans un cercle pour la version Mobile).
+- Si nbImages (nombre d'images de 'pictures') > 1 : ajouter
+    - les flèches gauche & droite
+    - le compteur (n° image courante / nbImages)
+    - les nbImages bullet points (tous en blanc, sauf le bullet point de l'image courante mis en couleur orange)
+
 - Règles de défilement des images :
-    - Si l'image courante est la 1ère image & si l'utilisateur clique sur "flèche gauche" : on affiche la dernière image 
-    - Si l'image courante est la dernière & si l'utilisateur clique sur "flèche droite" : on affiche la 1ère image. 
+    - si clic sur "flèche gauche" &  l'image courante est la 1ère : on affiche la dernière image 
+    - si clic sur "flèche droite" & l'image courante est la dernière : on affiche la 1ère image
+    - Si clic sur le i ème bullet point : on affiche la i ème image (& Le bullet point actif prend la couleur orange).
 */
 function Carrousel({ pictures }) {
 
     const [imageCourante, setImageCourante] = useState(0);
     const nbImages = pictures.length;
 
+    // MAJ la position de l'image courante Si clic sur la flèche gauche
+    function precedant() {
+        setImageCourante(imageCourante === 0 ? nbImages - 1 : imageCourante - 1);
+    }
+
+    // MAJ la position de l'image courante Si clic sur la flèche droite
     function suivant() {
         setImageCourante(imageCourante === nbImages - 1 ? 0 : imageCourante + 1);
     }
 
-    function precedant() {
-        setImageCourante(imageCourante === 0 ? nbImages - 1 : imageCourante - 1);
+    // MAJ la position de l'image courante Si clic sur le ième picto bullet point  
+    function activer(evt) {
+        const str = evt.target.alt;
+        // récupérer la position du picto sur lequel on a cliqué
+        const p = Number(str.replace(/[^\d]/g, ''));
+        setImageCourante(p);
+    }
+
+    // créer un array (contenant 0, 1, 2...nbImages-1) représentant les bullets points
+    const pictos = new Array(nbImages);
+    for (let i = 0; i < nbImages; i++) {
+        pictos[i] = i;
     }
 
     return (
@@ -47,17 +66,39 @@ function Carrousel({ pictures }) {
                 );
             })}
 
-            {/* Si >=2 images : ajouter les flèches gauche & droite & le compteur */}
+            {/* Si > 1 images : ajouter les flèches gauche & droite & le compteur & les BULLETS */}
             {nbImages > 1 ? (
                 <div>
-                    <div className={classes.c_carrousel__precedant} onClick={precedant}>
-                        <img src={flecheGauche} alt="flèche gauche" />
+                    <div className={classes.c_carrousel__precedant} >
+                        <img src={flecheGauche} alt="flèche gauche" onClick={precedant} />
                     </div>
                     <div className={classes.c_carrousel__suivant} onClick={suivant}>
                         <img src={flecheDroite} alt="flèche droite" />
                     </div>
-                    <div className={classes.c_carrousel__compteur_pc}> {imageCourante + 1}/ {nbImages} </div>
-                    <div className={classes.c_carrousel__compteur_mobile}> {imageCourante + 1} </div>
+
+                    <div className={classes.c_carrousel__compteur}>
+                        <span> {imageCourante + 1}/ {nbImages} </span>
+                        { /* BULLET debut */}
+                        <div className={classes.c_pictos_bullet}>
+                            {pictos.map((picto) =>
+                                imageCourante === picto ? (
+                                    <img
+                                        key={picto.toString()}
+                                        src={pictoActif}
+                                        alt={"picto actif " + picto}
+                                    />
+                                ) : (
+                                    <img
+                                        key={picto.toString()}
+                                        src={pictoInactif}
+                                        alt={"picto inactif " + picto}
+                                        onClick={activer}
+                                    />
+                                )
+                            )}
+                        </div>
+                        { /* BULLET fin */}
+                    </div>
                 </div>
             ) : ''}
         </div>
