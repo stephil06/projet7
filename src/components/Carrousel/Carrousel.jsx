@@ -5,8 +5,8 @@ import classes from './Carrousel.module.css';
 
 import flecheGauche from '../../images/pc_fleche_gauche.svg';
 import flecheDroite from '../../images/pc_fleche_droite.svg';
-import pictoInactif from '../../images/pictoInactif.png'; // cf. https://www.flaticon.com/fr/chercher/5?word=cercle&shape=outline
-import pictoActif from '../../images/pictoActif.png';
+import pictoNonCourant from '../../images/pictoNonCourant.png'; // cf. https://www.flaticon.com/fr/chercher/5?word=cercle&shape=outline
+import pictoCourant from '../../images/pictoCourant.png';
 
 /* Composant 'Carrousel' 
 - contenant les props : 'pictures' : array d'image(s) correspondant à 'pictures' (pour un idlogement) du fichier data/logements.json
@@ -84,14 +84,14 @@ function Carrousel({ pictures }) {
                                 imageCourante === picto ? (
                                     <img
                                         key={picto.toString()}
-                                        src={pictoActif}
-                                        alt={"picto actif " + picto}
+                                        src={pictoCourant}
+                                        alt={"picto courant " + picto}
                                     />
                                 ) : (
                                     <img
                                         key={picto.toString()}
-                                        src={pictoInactif}
-                                        alt={"picto inactif " + picto}
+                                        src={pictoNonCourant}
+                                        alt={"picto non courant " + picto}
                                         onClick={activer}
                                     />
                                 )
