@@ -16,10 +16,13 @@ function Card({id, cover, title}) {
   // const {id, cover, title} = props;
 
   return (
-    <Link key={id} className={classes.c_card__location} to={'/location/' + id}>
+    <article className={classes.c_card__location}>
+    <Link key={id} to={'/location/' + id}>
+      
       <img className={classes.c_card__img} src={cover} alt="location" />
       <h2 className={classes.c_card__titre}>{title}</h2>
     </Link>
+    </article>
   )
 
 }
