@@ -5,6 +5,10 @@ import Navigation from '../../components/Navigation/Navigation';
 
 import classes from './Error404.module.css';
 
+/* Page 'Error404' : 
+    - Page qui est affichée lorsqu'aucune route (définie dans App.js) ne correspond
+  NB : on ajoute <Navigation> (car 'Error404' ne dépend pas de <BaseLayout>)   
+*/
 function Error404() {
   // mettre un titre dans l'onglet du navigateur
   document.title = "Page d'erreur";

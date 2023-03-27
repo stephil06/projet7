@@ -58,7 +58,7 @@ function Carrousel({ pictures }) {
                     <div
                         key={index}
                         className={index === imageCourante ? classes.c_carrousel___image_courante : ''}>
-
+                        {/* on affiche l'image courante */ }
                         {index === imageCourante && (
                             <img src={picture} alt="" className={classes.c_carrousel__img} />
                         )}

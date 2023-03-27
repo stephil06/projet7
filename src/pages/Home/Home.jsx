@@ -8,7 +8,14 @@ import image_banner from '../../images/banner.png';
 import Banner from '../../components/Banner/Banner';
 import Card from '../../components/Card/Card';
 
-/* Affiche tous les logements du fichier /data/logements.json
+/* Page 'Home' : 
+    - affiche <Banner> ({image, texte}) (réutilisé dans la Page 'About' )
+    - récupère tous les logements du fichier logements.json dans un array, via useLoaderData()
+    cf. App.js : <Route index element={<Home />} loader={LoaderListeLogements}
+  
+    - affiche chaque logement dans des <Card> ({ id, cover, title })
+        - Si clic sur 1 Card : redirection vers la page '/location/id'
+NB: L'affichage de <Navigation> & de <Footer> : via <BaseLayout>    
 */
 function Home() {
 

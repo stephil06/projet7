@@ -1,8 +1,8 @@
 import React from 'react';
 
 import image_banner from '../../images/banner_homePage.jpg';
-import Banner from '../../components/Banner/Banner';
 
+import Banner from '../../components/Banner/Banner';
 import Collapse from '../../components/Collapse/Collapse';
 
 import classes from './About.module.css';
@@ -10,15 +10,15 @@ import classes from './About.module.css';
 // creer un array contenant les qualités ("nom" & "description")
 const qualites = [
   {
-    nom: "Fiabilité",
+    nom: 'Fiabilité',
     description: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
   },
   {
-    nom: "Respect",
+    nom: 'Respect',
     description: "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
   },
   {
-    nom: "Service",
+    nom: 'Service',
     description: "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
   },
   {
@@ -27,6 +27,12 @@ const qualites = [
   }
 ];
 
+/* Page 'About' : 
+    - affiche <Banner> ({image, texte}) (réutilisé dans la Page 'Home' )
+    - affiche les 4 <Collapse ({label, contenu})
+      (réutilisé dans la page 'DetailLocation')
+    NB: L'affichage de <Navigation> & de <Footer> : via <BaseLayout>    
+*/
 function About() {
 
   // mettre un titre dans l'onglet du navigateur

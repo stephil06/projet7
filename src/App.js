@@ -1,4 +1,4 @@
-import React from 'react'; // pour programmer des sites web d'une seule page (Single Page Application)
+import React from 'react'; // pour créer des sites web d'une seule page (Single Page Application)
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider }
   from 'react-router-dom'; // precondition : npm install --save react-router-dom
 
@@ -17,44 +17,41 @@ import data from './data/logements.json'; // data : array d'objets JSON logement
 
 
 // retourner à partir du fichier logements.json un array de logements 
-function LoaderListeLogements() {
+function loaderListeLogements() {
   // console.log("data:" + data);
   return data;
 }
 
 // retourner le logement (objet JSON) ayant pour identifiant id (passé dans l'URL) 
-function LoaderDetailLogement({ params }) {
+function loaderDetailLogement({ params }) {
   // récupérer le id passé dans l'URL
   const { id } = params;
   // console.log("id:" + id);
-
-  // rechercher le logement ayant pour identifiant le id passé dans l'URL
-  const logt = data.find((logt) => logt.id === id);
-  return logt;
+  return data.find((logt) => logt.id === id);
 }
 
-
 const router = createBrowserRouter(
-  // loader : définir les fonctions de chargement des data
-  // Pour récupérer les data dans Home & DetailLocation : 
-  // 1) import { useLoaderData } from 'react-router-dom';
-  // 2) data = useLoaderData();
 
   createRoutesFromElements(
-    // Le composant <Route> définit une relation entre une URL et un Component. 
-    // Cela signifie que lorsque l'utilisateur visite une URL sur le navigateur, 
-    // un Component correspondant doit être rendu sur l'interface.
+    // Le composant <Route> définit une relation entre une URL et un Composant
+    // Via les props 'path' & 'element' 
+    // => lorsque l'utilisateur visite une URL, le Composant correspondant est affiché.
+    // Via la props 'errorElement' : on indique la page lorsqu'aucune route ne correspond.
 
-    <Route path="/"
+    // La props 'loader' : définit la fonction de chargement des data
+    // Pour récupérer les data dans Home & DetailLocation : 
+    // 1) import { useLoaderData } from 'react-router-dom'; // 2) data = useLoaderData();
+
+    <Route path='/'
       element={<BaseLayout />} errorElement={<Error404 />}
     >
       <Route
-        index element={<Home />} loader={LoaderListeLogements}
+        index element={<Home />} loader={loaderListeLogements}
       />
-      <Route path="location/:id"
-        element={<DetailLocation />} loader={LoaderDetailLogement}
+      <Route path='location/:id'
+        element={<DetailLocation />} loader={loaderDetailLogement}
       />
-      <Route path="apropos"
+      <Route path='apropos'
         element={<About />}
       />
     </Route>
