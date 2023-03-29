@@ -24,7 +24,6 @@
 .c_logement__tags {
     font-size: 14px; /* width : 115px; */
     display: flex;
-    flex-wrap: no-wrap;
 }
 
 .c_logement__host_et_rating {

@@ -23,7 +23,7 @@ function Collapse({ label, contenu }) {
         <div>
             <button className={classes.c_collapse__button} onClick={basculer}>{label}
                 { /* Si open : appliquer la classe 'c_collapse__signe_open' (i.e inverser la lettre 'V') */}
-                <p className={open ? classes.c_collapse__signe_open : ''}>V</p>
+                <span className={open ? classes.c_collapse__signe_open : ''}>V</span>
             </button>
 
             { /* Si open : ajout du <p> */}
