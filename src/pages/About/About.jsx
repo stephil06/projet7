@@ -1,6 +1,6 @@
 import React from 'react';
 
-import image_banner from '../../images/banner_homePage.jpg';
+import image_banner from '../../images/banner_about.jpg';
 
 import Banner from '../../components/Banner/Banner';
 import Collapse from '../../components/Collapse/Collapse';

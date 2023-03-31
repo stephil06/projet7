@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom'; // pour utiliser la fonction :
 
 import classes from './Home.module.css';
 
-import image_banner from '../../images/banner.png';
+import image_banner from '../../images/banner_homepage.png';
 
 import Banner from '../../components/Banner/Banner';
 import Card from '../../components/Card/Card';

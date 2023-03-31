@@ -1,4 +1,4 @@
-/* Déclarration des VARIABLES */
+/* Déclaration des VARIABLES */
 
 /* Couleurs (de la charte) ------------------------------------------------------------------ */
 :root {
@@ -14,17 +14,12 @@
   /* initialement black; */
   --couleur_fond_tertiaire: #F6F6F6;
   --couleur_fond_quaternaire: #FF6060;
-
 }
 
-/* Importer 2 polices (dans le fichier CSS => importation unique)
-  - Picto : font-awesome
-  - Texte: Montserra
+/* Importer police
+  - Texte: Montserrat
 */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-
 
 * {
   font-family: 'Montserrat', sans-serif; /* Cursive; */ /* 'Montserrat', sans-serif; */
