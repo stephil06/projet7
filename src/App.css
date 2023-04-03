@@ -24,3 +24,10 @@
 * {
   font-family: 'Montserrat', sans-serif; /* Cursive; */ /* 'Montserrat', sans-serif; */
 }
+
+body {
+  max-width: 1440px;  /* MAJ demandée soutenance du 03 04 2023 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
